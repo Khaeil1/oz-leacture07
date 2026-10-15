@@ -1,0 +1,400 @@
+/* ==============================
+   01. 디자인 변수
+============================== */
+
+:root {
+  --bg: #f5f3ed;
+  --bg-light: #eeece6;
+  --text: #171717;
+  --muted: #626262;
+  --line: #d9d6ce;
+  --accent: #0b6fb8;
+  --card-bg: #ffffff;
+  --image-bg: #dfeaf2;
+}
+
+
+/* ==============================
+   02. 기본 설정
+============================== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ==============================
+   03. 공통 섹션
+============================== */
+
+.section {
+  padding: 100px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-light {
+  background-color: var(--bg-light);
+}
+
+.section-number,
+.eyebrow,
+.skill-label,
+.card-number {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.section h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.section-lead {
+  max-width: 42rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.section-description {
+  max-width: 42rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+
+/* ==============================
+   04. Navbar
+============================== */
+
+.site-header {
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+  padding: 1.25rem 0;
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: var(--accent);
+}
+
+.navbar-brand {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.navbar-nav {
+  gap: 1rem;
+}
+
+.navbar .nav-link {
+  color: var(--text);
+  font-size: 0.875rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
+  color: var(--accent);
+}
+
+
+/* ==============================
+   05. 햄버거 버튼
+============================== */
+
+.navbar-toggler {
+  padding: 0.5rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.navbar-toggler-icon {
+  width: 24px;
+  height: 18px;
+
+  background:
+    linear-gradient(var(--accent), var(--accent))
+      top / 100% 2px no-repeat,
+
+    linear-gradient(var(--accent), var(--accent))
+      center / 100% 2px no-repeat,
+
+    linear-gradient(var(--accent), var(--accent))
+      bottom / 100% 2px no-repeat;
+}
+
+
+/* ==============================
+   06. Hero
+============================== */
+
+.hero {
+  min-height: 80vh;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  margin-top: 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+}
+
+.hero-description {
+  max-width: 34rem;
+  margin: 1.5rem 0 2rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.hero .btn {
+  padding: 0.65rem 1.2rem;
+  border-radius: 0;
+  font-size: 0.875rem;
+}
+
+.hero-image-wrap {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--image-bg);
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+
+/* ==============================
+   07. Skills / Work 카드
+============================== */
+
+.skill-card,
+.work-card {
+  background-color: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 0;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.skill-card:hover,
+.work-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.skill-card .card-body,
+.work-card .card-body {
+  padding: 1.5rem;
+}
+
+.skill-card h3,
+.work-card h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.skill-card .card-text,
+.work-card .card-text {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.work-card .badge {
+  margin-top: 1rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0;
+  font-weight: 600;
+}
+
+
+/* ==============================
+   08. Contact
+============================== */
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.form-control {
+  padding: 0.85rem;
+  background-color: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.form-control:focus {
+  background-color: var(--card-bg);
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(11, 111, 184, 0.15);
+}
+
+.form-control::placeholder {
+  color: var(--muted);
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+
+/* ==============================
+   09. Footer
+============================== */
+
+.footer {
+  background-color: #171717;
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==============================
+   10. 반응형
+============================== */
+
+@media (max-width: 991.98px) {
+
+  .navbar-nav {
+    gap: 0;
+    padding-top: 1rem;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 70px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+
+  .section-lead {
+    font-size: 1.125rem;
+  }
+
+}
+
+
+/* ==============================
+   11. 다크모드
+============================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --bg: #171717;
+    --bg-light: #202020;
+    --text: #f5f3ed;
+    --muted: #c7c7c7;
+    --line: #3a3a3a;
+    --accent: #7dbdf0;
+    --card-bg: #242424;
+    --image-bg: #303a42;
+  }
+
+  /* Bootstrap 버튼 색상 보정 */
+  .hero .btn-dark,
+  #contact .btn-dark {
+    background-color: #f5f3ed;
+    border-color: #f5f3ed;
+    color: #171717;
+  }
+
+  .hero .btn-dark:hover,
+  #contact .btn-dark:hover {
+    background-color: #dedbd2;
+    border-color: #dedbd2;
+    color: #171717;
+  }
+
+  /* Bootstrap Badge 색상 보정 */
+  .work-card .badge.text-bg-light {
+    background-color: #383838 !important;
+    color: #f5f3ed !important;
+  }
+
+}
+
+
+/* ==============================
+   12. 접근성
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .skill-card,
+  .work-card {
+    transition: none;
+  }
+
+}
