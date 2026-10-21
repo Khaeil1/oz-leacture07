@@ -22,6 +22,14 @@ for (let dan = 2; dan <= 9; dan++) {
   console.log(`${dan}단은 홀수 단입니다`);
 }
 
+// 3. 짝수 단만 — 짝수 단은 continue로 건너뜁니다
+for (let dan = 2; dan <= 9; dan++) {
+  if (dan % 2 === 1) {
+    continue;
+  }
+  console.log(`${dan}단은 짝수 단입니다`);
+}
+
 // 4. 7단에서 처음으로 50을 넘는 곱 — 찾으면 break로 멈춥니다
 for (let i = 1; i <= 9; i++) {
   if (7 * i > 50) {
