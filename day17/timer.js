@@ -5,7 +5,7 @@ const startBtn = document.querySelector("#start-btn");
 const stopBtn = document.querySelector("#stop-btn");
 const resetBtn = document.querySelector("#reset-btn");
 
-const START = 10;
+const START = 20;
 let left = START;     // 남은 초
 let timerId = null;   // setInterval이 돌려준 번호 — 멈출 때 씁니다
 
